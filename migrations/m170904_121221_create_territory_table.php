@@ -1,0 +1,295 @@
+<?php
+
+use yii\db\Migration;
+
+/**
+ * Handles the creation of table `territory`.
+ */
+class m170904_121221_create_territory_table extends Migration
+{
+    /**
+     * @inheritdoc
+     */
+    public function safeUp()
+    {
+        $this->createTable('territory' , [
+            'id' => $this->primaryKey(),
+            'territory_name' => $this->string(40)->notNull(),
+            'coefficient' => $this->float()->notNull(),
+        ]);
+
+        $this->insert('territory', ['territory_name' => 'Республика Адыгея',     'coefficient' =>  1.3]);
+        $this->insert('territory', ['territory_name' => 'Горно-Алтайск',         'coefficient' =>  1.3]);
+        $this->insert('territory', ['territory_name' => 'Благовещенск',          'coefficient' =>  1.2]);
+        $this->insert('territory', ['territory_name' => 'Октябрьский',           'coefficient' =>  1.2]);
+        $this->insert('territory', ['territory_name' => 'Ишимбай',               'coefficient' =>  1.1]);
+        $this->insert('territory', ['territory_name' => 'Кумертау',              'coefficient' =>  1.1]);
+        $this->insert('territory', ['territory_name' => 'Салават',               'coefficient' =>  1.1]);
+        $this->insert('territory', ['territory_name' => 'Стерлитамак',           'coefficient' =>  1.3]);
+        $this->insert('territory', ['territory_name' => 'Туймазы',               'coefficient' =>  1.3]);
+        $this->insert('territory', ['territory_name' => 'Уфа',                   'coefficient' =>  1.8]);
+        $this->insert('territory', ['territory_name' => 'Улан-Удэ',              'coefficient' =>  1.3]);
+        $this->insert('territory', ['territory_name' => 'Буйнакск',              'coefficient' =>  0.7]);
+        $this->insert('territory', ['territory_name' => 'Дербент',               'coefficient' =>  0.7]);
+        $this->insert('territory', ['territory_name' => 'Каспийск',              'coefficient' =>  0.7]);
+        $this->insert('territory', ['territory_name' => 'Махачкала',             'coefficient' =>  0.7]);
+        $this->insert('territory', ['territory_name' => 'Хасавюрт',              'coefficient' =>  0.7]);
+        $this->insert('territory', ['territory_name' => 'Малгобек',              'coefficient' =>  0.8]);
+        $this->insert('territory', ['territory_name' => 'Назрань',               'coefficient' =>  0.6]);
+        $this->insert('territory', ['territory_name' => 'Нальчик',               'coefficient' =>  1]);
+        $this->insert('territory', ['territory_name' => 'Прохладный',            'coefficient' =>  1]);
+        $this->insert('territory', ['territory_name' => 'Элиста',                'coefficient' =>  1.3]);
+        $this->insert('territory', ['territory_name' => 'Петрозаводск',          'coefficient' =>  1.3]);
+        $this->insert('territory', ['territory_name' => 'Сыктывкар',             'coefficient' =>  1.6]);
+        $this->insert('territory', ['territory_name' => 'Ухта',                  'coefficient' =>  1.3]);
+        $this->insert('territory', ['territory_name' => 'Симферополь',           'coefficient' =>  0.6]);
+        $this->insert('territory', ['territory_name' => 'Волжск',                'coefficient' =>  1]);
+        $this->insert('territory', ['territory_name' => 'Йошкар-Ола',            'coefficient' =>  1.4]);
+        $this->insert('territory', ['territory_name' => 'Рузаевка',              'coefficient' =>  1.2]);
+        $this->insert('territory', ['territory_name' => 'Саранск',               'coefficient' =>  1.5]);
+        $this->insert('territory', ['territory_name' => 'Нерюнгри',              'coefficient' =>  0.8]);
+        $this->insert('territory', ['territory_name' => 'Якутск',                'coefficient' =>  1.2]);
+        $this->insert('territory', ['territory_name' => 'Владикавказ',           'coefficient' =>  1]);
+        $this->insert('territory', ['territory_name' => 'Альметьевск',           'coefficient' =>  1.3]);
+        $this->insert('territory', ['territory_name' => 'Зеленодольск',          'coefficient' =>  1.3]);
+        $this->insert('territory', ['territory_name' => 'Нижнекамск',            'coefficient' =>  1.3]);
+        $this->insert('territory', ['territory_name' => 'Бугульма',              'coefficient' =>  1]);
+        $this->insert('territory', ['territory_name' => 'Лениногорск',           'coefficient' =>  1]);
+        $this->insert('territory', ['territory_name' => 'Чистополь',             'coefficient' =>  1]);
+        $this->insert('territory', ['territory_name' => 'Елабуга',               'coefficient' =>  1.2]);
+        $this->insert('territory', ['territory_name' => 'Казань',                'coefficient' =>  2]);
+        $this->insert('territory', ['territory_name' => 'Набережные Челны',      'coefficient' =>  1.7]);
+        $this->insert('territory', ['territory_name' => 'Кызыл',                 'coefficient' =>  0.6]);
+        $this->insert('territory', ['territory_name' => 'Воткинск',              'coefficient' =>  1.1]);
+        $this->insert('territory', ['territory_name' => 'Глазов, Сарапул',       'coefficient' =>  1]);
+        $this->insert('territory', ['territory_name' => 'Ижевск',                'coefficient' =>  1.6]);
+        $this->insert('territory', ['territory_name' => 'Абакан',                'coefficient' =>  1]);
+        $this->insert('territory', ['territory_name' => 'Саяногорск',            'coefficient' =>  1]);
+        $this->insert('territory', ['territory_name' => 'Черногорск',            'coefficient' =>  1]);
+        $this->insert('territory', ['territory_name' => 'Чеченская Республика',  'coefficient' =>  0.6]);
+        $this->insert('territory', ['territory_name' => 'Канаш',                 'coefficient' =>  1.1]);
+        $this->insert('territory', ['territory_name' => 'Новочебоксарск',        'coefficient' =>  1.2]);
+        $this->insert('territory', ['territory_name' => 'Чебоксары',             'coefficient' =>  1.7]);
+        $this->insert('territory', ['territory_name' => 'Барнаул',               'coefficient' =>  1.7]);
+        $this->insert('territory', ['territory_name' => 'Бийск',                 'coefficient' =>  1.2]);
+        $this->insert('territory', ['territory_name' => 'Заринск',               'coefficient' =>  1.1]);
+        $this->insert('territory', ['territory_name' => 'Новоалтайск',           'coefficient' =>  1.1]);
+        $this->insert('territory', ['territory_name' => 'Рубцовск',              'coefficient' =>  1.1]);
+        $this->insert('territory', ['territory_name' => 'Краснокаменск',         'coefficient' =>  0.6]);
+        $this->insert('territory', ['territory_name' => 'Чита',                  'coefficient' =>  0.7]);
+        $this->insert('territory', ['territory_name' => 'Петропавловск-Камчатский', 'coefficient' =>  1.3]);
+        $this->insert('territory', ['territory_name' => 'Анапа',                 'coefficient' =>  1.3]);
+        $this->insert('territory', ['territory_name' => 'Геленджик',             'coefficient' =>  1.3]);
+        $this->insert('territory', ['territory_name' => 'Армавир',               'coefficient' =>  1.2]);
+        $this->insert('territory', ['territory_name' => 'Сочи',                  'coefficient' =>  1.2]);
+        $this->insert('territory', ['territory_name' => 'Туапсе',                'coefficient' =>  1.2]);
+        $this->insert('territory', ['territory_name' => 'Белореченск, ',         'coefficient' =>  1.1]);
+        $this->insert('territory', ['territory_name' => 'Ейск',                  'coefficient' =>  1.1]);
+        $this->insert('territory', ['territory_name' => 'Кропоткин',             'coefficient' =>  1.1]);
+        $this->insert('territory', ['territory_name' => 'Крымск',                'coefficient' =>  1.1]);
+        $this->insert('territory', ['territory_name' => 'Курганинск',            'coefficient' =>  1.1]);
+        $this->insert('territory', ['territory_name' => 'Краснодар',             'coefficient' =>  1.8]);
+        $this->insert('territory', ['territory_name' => 'Новороссийск',          'coefficient' =>  1.8]);
+        $this->insert('territory', ['territory_name' => 'Ачинск',                'coefficient' =>  1.1]);
+        $this->insert('territory', ['territory_name' => 'Зеленогорск',           'coefficient' =>  1.1]);
+        $this->insert('territory', ['territory_name' => 'Железногорск',          'coefficient' =>  1.3]);
+        $this->insert('territory', ['territory_name' => 'Норильск',              'coefficient' =>  1.3]);
+        $this->insert('territory', ['territory_name' => 'Канск',                 'coefficient' =>  1]);
+        $this->insert('territory', ['territory_name' => 'Лесосибирск',           'coefficient' =>  1]);
+        $this->insert('territory', ['territory_name' => 'Минусинск',             'coefficient' =>  1]);
+        $this->insert('territory', ['territory_name' => 'Назарово',              'coefficient' =>  1]);
+        $this->insert('territory', ['territory_name' => 'Красноярск',            'coefficient' =>  1.8]);
+        $this->insert('territory', ['territory_name' => 'Березники',             'coefficient' =>  1.3]);
+        $this->insert('territory', ['territory_name' => 'Краснокамск',           'coefficient' =>  1.3]);
+        $this->insert('territory', ['territory_name' => 'Лысьва',                'coefficient' =>  1]);
+        $this->insert('territory', ['territory_name' => 'Чайковский',            'coefficient' =>  1]);
+        $this->insert('territory', ['territory_name' => 'Пермь',                 'coefficient' =>  2]);
+        $this->insert('territory', ['territory_name' => 'Соликамск',             'coefficient' =>  1.2]);
+        $this->insert('territory', ['territory_name' => 'Арсеньев',              'coefficient' =>  1]);
+        $this->insert('territory', ['territory_name' => 'Артем',                 'coefficient' =>  1]);
+        $this->insert('territory', ['territory_name' => 'Находка',               'coefficient' =>  1]);
+        $this->insert('territory', ['territory_name' => 'Спасск-Дальний',        'coefficient' =>  1]);
+        $this->insert('territory', ['territory_name' => 'Уссурийс',              'coefficient' =>  1]);
+        $this->insert('territory', ['territory_name' => 'Владивосток',           'coefficient' =>  1.4]);
+        $this->insert('territory', ['territory_name' => 'Буденновск',            'coefficient' =>  1]);
+        $this->insert('territory', ['territory_name' => 'Георгиевск',            'coefficient' =>  1]);
+        $this->insert('territory', ['territory_name' => 'Ессентуки',             'coefficient' =>  1]);
+        $this->insert('territory', ['territory_name' => 'Минеральные Вод',       'coefficient' =>  1]);
+        $this->insert('territory', ['territory_name' => 'Кисловодск',            'coefficient' =>  1.2]);
+        $this->insert('territory', ['territory_name' => 'Михайловск',            'coefficient' =>  1.2]);
+        $this->insert('territory', ['territory_name' => 'Ставрополь',            'coefficient' =>  1.2]);
+        $this->insert('territory', ['territory_name' => 'Амурск',                'coefficient' =>  1]);
+        $this->insert('territory', ['territory_name' => 'Комсомольск-на-Амуре',  'coefficient' =>  1.3]);
+        $this->insert('territory', ['territory_name' => 'Хабаровск',             'coefficient' =>  1.7]);
+        $this->insert('territory', ['territory_name' => 'Белогорск',             'coefficient' =>  1.1]);
+        $this->insert('territory', ['territory_name' => 'Свободный',             'coefficient' =>  1.1]);
+        $this->insert('territory', ['territory_name' => 'Благовещенск',          'coefficient' =>  1.6]);
+        $this->insert('territory', ['territory_name' => 'Архангельск',           'coefficient' =>  1.8]);
+        $this->insert('territory', ['territory_name' => 'Котлас',                'coefficient' =>  1.6]);
+        $this->insert('territory', ['territory_name' => 'Северодвинск',          'coefficient' =>  1.7]);
+        $this->insert('territory', ['territory_name' => 'Астрахань',             'coefficient' =>  1.4]);
+        $this->insert('territory', ['territory_name' => 'Белгород',              'coefficient' =>  1.3]);
+        $this->insert('territory', ['territory_name' => 'Губкин',                'coefficient' =>  1]);
+        $this->insert('territory', ['territory_name' => 'Старый Оскол',          'coefficient' =>  1]);
+        $this->insert('territory', ['territory_name' => 'Брянск',                'coefficient' =>  1.5]);
+        $this->insert('territory', ['territory_name' => 'Клинцы',                'coefficient' =>  1]);
+        $this->insert('territory', ['territory_name' => 'Владимир',              'coefficient' =>  1.6]);
+        $this->insert('territory', ['territory_name' => 'Гусь-Хрустальный',      'coefficient' =>  1.1]);
+        $this->insert('territory', ['territory_name' => 'Муром',                 'coefficient' =>  1.2]);
+        $this->insert('territory', ['territory_name' => 'Волгоград',             'coefficient' =>  1.3]);
+        $this->insert('territory', ['territory_name' => 'Волжский',              'coefficient' =>  1.1]);
+        $this->insert('territory', ['territory_name' => 'Камышин',               'coefficient' =>  1]);
+        $this->insert('territory', ['territory_name' => 'Михайловка',            'coefficient' =>  1]);
+        $this->insert('territory', ['territory_name' => 'Вологда',               'coefficient' =>  1.7]);
+        $this->insert('territory', ['territory_name' => 'Череповец',             'coefficient' =>  1.8]);
+        $this->insert('territory', ['territory_name' => 'Борисоглебск',          'coefficient' =>  1.1]);
+        $this->insert('territory', ['territory_name' => 'Лиски',                 'coefficient' =>  1.1]);
+        $this->insert('territory', ['territory_name' => 'Россошь',               'coefficient' =>  1.1]);
+        $this->insert('territory', ['territory_name' => 'Воронеж',               'coefficient' =>  1.5]);
+        $this->insert('territory', ['territory_name' => 'Иваново',               'coefficient' =>  1.8]);
+        $this->insert('territory', ['territory_name' => 'Кинешма',               'coefficient' =>  1.1]);
+        $this->insert('territory', ['territory_name' => 'Шуя',                   'coefficient' =>  1]);
+        $this->insert('territory', ['territory_name' => 'Ангарск',               'coefficient' =>  1.2]);
+        $this->insert('territory', ['territory_name' => 'Братск',                'coefficient' =>  1]);
+        $this->insert('territory', ['territory_name' => 'Тулун',                 'coefficient' =>  1]);
+        $this->insert('territory', ['territory_name' => 'Усть-Илимск',           'coefficient' =>  1]);
+        $this->insert('territory', ['territory_name' => 'Усть-Кут',              'coefficient' =>  1]);
+        $this->insert('territory', ['territory_name' => 'Черемхово',             'coefficient' =>  1]);
+        $this->insert('territory', ['territory_name' => 'Иркутск',               'coefficient' =>  1.7]);
+        $this->insert('territory', ['territory_name' => 'Усолье-Сибирское',      'coefficient' =>  1.1]);
+        $this->insert('territory', ['territory_name' => 'Шелехов',               'coefficient' =>  1.3]);
+        $this->insert('territory', ['territory_name' => 'Калининград',           'coefficient' =>  1.1]);
+        $this->insert('territory', ['territory_name' => 'Калуга',                'coefficient' =>  1.2]);
+        $this->insert('territory', ['territory_name' => 'Обнинск',               'coefficient' =>  1.3]);
+        $this->insert('territory', ['territory_name' => 'Анжеро-Судженск',       'coefficient' =>  1.2]);
+        $this->insert('territory', ['territory_name' => 'Киселевск',             'coefficient' =>  1.2]);
+        $this->insert('territory', ['territory_name' => 'Юрга',                  'coefficient' =>  1.2]);
+        $this->insert('territory', ['territory_name' => 'Белово',                'coefficient' =>  1.3]);
+        $this->insert('territory', ['territory_name' => 'Березовский',           'coefficient' =>  1.3]);
+        $this->insert('territory', ['territory_name' => 'Междуреченск',          'coefficient' =>  1.3]);
+        $this->insert('territory', ['territory_name' => 'Осинники',              'coefficient' =>  1.3]);
+        $this->insert('territory', ['territory_name' => 'Проко',                 'coefficient' =>  1.3]);
+        $this->insert('territory', ['territory_name' => 'Кемерово',              'coefficient' =>  1.9]);
+        $this->insert('territory', ['territory_name' => 'Новокузнецк',           'coefficient' =>  1.8]);
+        $this->insert('territory', ['territory_name' => 'Киров',                 'coefficient' =>  1.4]);
+        $this->insert('territory', ['territory_name' => 'Кирово-Чепецк',         'coefficient' =>  1.2]);
+        $this->insert('territory', ['territory_name' => 'Кострома',              'coefficient' =>  1.3]);
+        $this->insert('territory', ['territory_name' => 'Курган',                'coefficient' =>  1.4]);
+        $this->insert('territory', ['territory_name' => 'Шадринск',              'coefficient' =>  1.1]);
+        $this->insert('territory', ['territory_name' => 'Курск',                 'coefficient' =>  1.2]);
+        $this->insert('territory', ['territory_name' => 'Ленинградская область', 'coefficient' =>  1.3]);
+        $this->insert('territory', ['territory_name' => 'Елец',                  'coefficient' =>  1]);
+        $this->insert('territory', ['territory_name' => 'Липецк',                'coefficient' =>  1.5]);
+        $this->insert('territory', ['territory_name' => 'Магадан',               'coefficient' =>  0.7]);
+        $this->insert('territory', ['territory_name' => 'Московская область',    'coefficient' =>  1.7]);
+        $this->insert('territory', ['territory_name' => 'Апатиты',               'coefficient' =>  1.3]);
+        $this->insert('territory', ['territory_name' => 'Мончегорск',            'coefficient' =>  1.3]);
+        $this->insert('territory', ['territory_name' => 'Мурманск',              'coefficient' =>  2.1]);
+        $this->insert('territory', ['territory_name' => 'Североморск',           'coefficient' =>  1.6]);
+        $this->insert('territory', ['territory_name' => 'Арзамас',               'coefficient' =>  1.1]);
+        $this->insert('territory', ['territory_name' => 'Выкса',                 'coefficient' =>  1.1]);
+        $this->insert('territory', ['territory_name' => 'Саров',                 'coefficient' =>  1.1]);
+        $this->insert('territory', ['territory_name' => 'Балахна',               'coefficient' =>  1.3]);
+        $this->insert('territory', ['territory_name' => 'Бор',                   'coefficient' =>  1.3]);
+        $this->insert('territory', ['territory_name' => 'Дзержинск',             'coefficient' =>  1.3]);
+        $this->insert('territory', ['territory_name' => 'Кстово',                'coefficient' =>  1.2]);
+        $this->insert('territory', ['territory_name' => 'Нижний Новгород',       'coefficient' =>  1.8]);
+        $this->insert('territory', ['territory_name' => 'Боровичи',              'coefficient' =>  1]);
+        $this->insert('territory', ['territory_name' => 'Великий Новгород',      'coefficient' =>  1.3]);
+        $this->insert('territory', ['territory_name' => 'Бердск',                'coefficient' =>  1.3]);
+        $this->insert('territory', ['territory_name' => 'Искитим',               'coefficient' =>  1.2]);
+        $this->insert('territory', ['territory_name' => 'Куйбышев',              'coefficient' =>  1]);
+        $this->insert('territory', ['territory_name' => 'Новосибирск',           'coefficient' =>  1.7]);
+        $this->insert('territory', ['territory_name' => 'Омск',                  'coefficient' =>  1.6]);
+        $this->insert('territory', ['territory_name' => 'Бугуруслан',            'coefficient' =>  1]);
+        $this->insert('territory', ['territory_name' => 'Бузулук',               'coefficient' =>  1]);
+        $this->insert('territory', ['territory_name' => 'Новотроицк',            'coefficient' =>  1]);
+        $this->insert('territory', ['territory_name' => 'Оренбург',              'coefficient' =>  1.7]);
+        $this->insert('territory', ['territory_name' => 'Орск',                  'coefficient' =>  1.1]);
+        $this->insert('territory', ['territory_name' => 'Ливны',                 'coefficient' =>  1]);
+        $this->insert('territory', ['territory_name' => 'Мценск',                'coefficient' =>  1]);
+        $this->insert('territory', ['territory_name' => 'Орел',                  'coefficient' =>  1.2]);
+        $this->insert('territory', ['territory_name' => 'Заречный',              'coefficient' =>  1.2]);
+        $this->insert('territory', ['territory_name' => 'Кузнецк',               'coefficient' =>  1]);
+        $this->insert('territory', ['territory_name' => 'Пенза',                 'coefficient' =>  1.4]);
+        $this->insert('territory', ['territory_name' => 'Великие Луки',          'coefficient' =>  1]);
+        $this->insert('territory', ['territory_name' => 'Псков',                 'coefficient' =>  1.2]);
+        $this->insert('territory', ['territory_name' => 'Азов',                  'coefficient' =>  1.2]);
+        $this->insert('territory', ['territory_name' => 'Батайск',               'coefficient' =>  1.3]);
+        $this->insert('territory', ['territory_name' => 'Ростов-на-Дону',        'coefficient' =>  1.8]);
+        $this->insert('territory', ['territory_name' => 'Шахты',                 'coefficient' =>  1.1]);
+        $this->insert('territory', ['territory_name' => 'Рязань',                'coefficient' =>  1.4]);
+        $this->insert('territory', ['territory_name' => 'Новокуйбышевск',        'coefficient' =>  1.1]);
+        $this->insert('territory', ['territory_name' => 'Сызрань',               'coefficient' =>  1.1]);
+        $this->insert('territory', ['territory_name' => 'Самара',                'coefficient' =>  1.6]);
+        $this->insert('territory', ['territory_name' => 'Тольятти',              'coefficient' =>  1.5]);
+        $this->insert('territory', ['territory_name' => 'Чапаевск',              'coefficient' =>  1.2]);
+        $this->insert('territory', ['territory_name' => 'Балаково',              'coefficient' =>  1]);
+        $this->insert('territory', ['territory_name' => 'Балашов',               'coefficient' =>  1]);
+        $this->insert('territory', ['territory_name' => 'Вольск',                'coefficient' =>  1]);
+        $this->insert('territory', ['territory_name' => 'Саратов',               'coefficient' =>  1.6]);
+        $this->insert('territory', ['territory_name' => 'Энгельс',               'coefficient' =>  1.2]);
+        $this->insert('territory', ['territory_name' => 'Южно-Сахалинск',        'coefficient' =>  1.5]);
+        $this->insert('territory', ['territory_name' => 'Асбест',                'coefficient' =>  1.1]);
+        $this->insert('territory', ['territory_name' => 'Ревда',                 'coefficient' =>  1.1]);
+        $this->insert('territory', ['territory_name' => 'Верхняя Салда',         'coefficient' =>  1.2]);
+        $this->insert('territory', ['territory_name' => 'Полевской',             'coefficient' =>  1.2]);
+        $this->insert('territory', ['territory_name' => 'Екатеринбург',          'coefficient' =>  1.8]);
+        $this->insert('territory', ['territory_name' => 'Вязьма',                'coefficient' =>  1]);
+        $this->insert('territory', ['territory_name' => 'Рославль',              'coefficient' =>  1]);
+        $this->insert('territory', ['territory_name' => 'Сафоново',              'coefficient' =>  1]);
+        $this->insert('territory', ['territory_name' => 'Ярцево',                'coefficient' =>  1]);
+        $this->insert('territory', ['territory_name' => 'Смоленск',              'coefficient' =>  1.2]);
+        $this->insert('territory', ['territory_name' => 'Мичуринск',             'coefficient' =>  1]);
+        $this->insert('territory', ['territory_name' => 'Тамбов',                'coefficient' =>  1.2]);
+        $this->insert('territory', ['territory_name' => 'Вышний Волочек',        'coefficient' =>  1]);
+        $this->insert('territory', ['territory_name' => 'Кимры',                 'coefficient' =>  1]);
+        $this->insert('territory', ['territory_name' => 'Ржев',                  'coefficient' =>  1]);
+        $this->insert('territory', ['territory_name' => 'Тверь',                 'coefficient' =>  1.5]);
+        $this->insert('territory', ['territory_name' => 'Северск',               'coefficient' =>  1.2]);
+        $this->insert('territory', ['territory_name' => 'Томск',                 'coefficient' =>  1.6]);
+        $this->insert('territory', ['territory_name' => 'Алексин',               'coefficient' =>  1]);
+        $this->insert('territory', ['territory_name' => 'Ефремов',               'coefficient' =>  1]);
+        $this->insert('territory', ['territory_name' => 'Новомосковск',          'coefficient' =>  1]);
+        $this->insert('territory', ['territory_name' => 'Тула',                  'coefficient' =>  1.5]);
+        $this->insert('territory', ['territory_name' => 'Узловая',               'coefficient' =>  1.2]);
+        $this->insert('territory', ['territory_name' => 'Щекино',                'coefficient' =>  1.2]);
+        $this->insert('territory', ['territory_name' => 'Тобольск',              'coefficient' =>  1.3]);
+        $this->insert('territory', ['territory_name' => 'Тюмень',                'coefficient' =>  2]);
+        $this->insert('territory', ['territory_name' => 'Димитровград',          'coefficient' =>  1.2]);
+        $this->insert('territory', ['territory_name' => 'Ульяновск',             'coefficient' =>  1.5]);
+        $this->insert('territory', ['territory_name' => 'Златоуст',              'coefficient' =>  1.4]);
+        $this->insert('territory', ['territory_name' => 'Миасс',                 'coefficient' =>  1.4]);
+        $this->insert('territory', ['territory_name' => 'Копейск',               'coefficient' =>  1.6]);
+        $this->insert('territory', ['territory_name' => 'Магнитогорск',          'coefficient' =>  1.8]);
+        $this->insert('territory', ['territory_name' => 'Сатка',                 'coefficient' =>  1.2]);
+        $this->insert('territory', ['territory_name' => 'Чебаркуль',             'coefficient' =>  1.2]);
+        $this->insert('territory', ['territory_name' => 'Челябинск',             'coefficient' =>  2.1]);
+        $this->insert('territory', ['territory_name' => 'Ярославль',             'coefficient' =>  1.5]);
+        $this->insert('territory', ['territory_name' => 'Москва',                'coefficient' =>  2]);
+        $this->insert('territory', ['territory_name' => 'Санкт-Петербург',       'coefficient' =>  1.8]);
+        $this->insert('territory', ['territory_name' => 'Севастополь',           'coefficient' =>  0.6]);
+        $this->insert('territory', ['territory_name' => 'Биробиджан',            'coefficient' =>  0.6]);
+        $this->insert('territory', ['territory_name' => 'Ненецкий автономный округ', 'coefficient' =>  0.8]);
+        $this->insert('territory', ['territory_name' => 'Когалым',               'coefficient' =>  1]);
+        $this->insert('territory', ['territory_name' => 'Нефтеюганск',           'coefficient' =>  1.3]);
+        $this->insert('territory', ['territory_name' => 'Нягань',                'coefficient' =>  1.3]);
+        $this->insert('territory', ['territory_name' => 'Сургут',                'coefficient' =>  2]);
+        $this->insert('territory', ['territory_name' => 'Нижневартовск',         'coefficient' =>  1.8]);
+        $this->insert('territory', ['territory_name' => 'Ханты-Мансийск',        'coefficient' =>  1.5]);
+        $this->insert('territory', ['territory_name' => 'Чукотский автономный округ', 'coefficient' =>  0.6]);
+        $this->insert('territory', ['territory_name' => 'Новый Уренгой',         'coefficient' =>  1]);
+        $this->insert('territory', ['territory_name' => 'Ноябрьск',              'coefficient' =>  1.7]);
+        $this->insert('territory', ['territory_name' => 'Байконур',              'coefficient' =>  0.6]);
+
+    }
+
+    /**
+     * @inheritdoc
+     */
+    public function safeDown()
+    {
+        $this->truncateTable('territory');
+        $this->dropTable('territory');
+    }
+}
