@@ -14,17 +14,6 @@ class CalcForm extends Model
     public $territory;
 
 
-    public function __construct(array $config = [])
-    {
-        parent::__construct($config);
-
-        $this->age = Age::getItemsFields();
-        $this->open = Open::getItemsFields();
-        $this->period = Period::getItemsFields();
-        $this->power = Power::getItemsFields();
-        $this->territory = Territory::getItemsFields();
-    }
-
     public function rules()
     {
         return [

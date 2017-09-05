@@ -21,22 +21,6 @@ class Age extends \yii\db\ActiveRecord
         return 'age';
     }
 
-
-    /**
-     * Возвращает массив для выпадающего списка
-     * @return array массив вида ['id' => 'name_age', ...]
-     */
-    public static function getItemsFields()
-    {
-        $items = Age::find()->all();
-        $result = [];
-        foreach ($items as $item) {
-            $result[$item['id']] = $item['name_age'];
-        }
-
-        return $result;
-    }
-
     /**
      * @inheritdoc
      */

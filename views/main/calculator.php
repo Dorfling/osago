@@ -1,16 +1,23 @@
-<h1>Калькулятор</h1>
 <?php
+/**
+ * @var $age
+ * @var $open
+ * @var $period
+ * @var $power
+ * @var $territory
+ */
 
 use yii\helpers\Html;
-use yii\widgets\ActiveForm;
+use yii\widgets\ActiveForm; ?>
 
-$form = ActiveForm::begin() ?>
+<h1>Калькулятор</h1>
+<?php $form = ActiveForm::begin() ?>
 
-<?= $form->field($model, 'power')->dropDownList($model->power) ?>
-<?= $form->field($model, 'open')->dropDownList($model->open) ?>
-<?= $form->field($model, 'age')->dropDownList($model->age) ?>
-<?= $form->field($model, 'territory')->dropDownList($model->territory) ?>
-<?= $form->field($model, 'period')->dropDownList($model->period) ?>
+<?= $form->field($model, 'age')->dropDownList($age) ?>
+<?= $form->field($model, 'open')->dropDownList($open) ?>
+<?= $form->field($model, 'period')->dropDownList($period) ?>
+<?= $form->field($model, 'power')->dropDownList($power) ?>
+<?= $form->field($model, 'territory')->dropDownList($territory) ?>
 
 <div class="form-group">
     <div class="col-lg-offset-1 col-lg-11">

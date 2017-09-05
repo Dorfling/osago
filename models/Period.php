@@ -22,21 +22,6 @@ class Period extends \yii\db\ActiveRecord
     }
 
     /**
-     * Возвращает массив для выпадающего списка
-     * @return array массив вида ['id' => 'period_name', ...]
-     */
-    public static function getItemsFields()
-    {
-        $items = Period::find()->all();
-        $result = [];
-        foreach ($items as $item) {
-            $result[$item['id']] = $item['period_name'];
-        }
-
-        return $result;
-    }
-
-    /**
      * @inheritdoc
      */
     public function rules()

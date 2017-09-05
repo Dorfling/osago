@@ -4,6 +4,12 @@ namespace app\controllers;
 
 use app\models\CalcForm;
 use yii\web\Controller;
+use yii\helpers\ArrayHelper;
+use app\models\Age;
+use app\models\Open;
+use app\models\Period;
+use app\models\Power;
+use app\models\Territory;
 
 
 class MainController extends Controller
@@ -27,7 +33,15 @@ class MainController extends Controller
     public function actionCalculator()
     {
         $model = new CalcForm();
-        return $this->render('calculator', compact('model'));
+
+        // Формирование пунктов для выподающих списков
+        $age = ArrayHelper::map(Age::find()->all(), 'id', 'name_age');
+        $open = ArrayHelper::map(Open::find()->all(), 'id', 'open_name');
+        $period = ArrayHelper::map(Period::find()->all(), 'id', 'period_name');
+        $power = ArrayHelper::map(Power::find()->all(), 'id', 'power_name');
+        $territory = ArrayHelper::map(Territory::find()->all(), 'id', 'territory_name');
+
+        return $this->render('calculator', compact('model', 'age', 'open', 'period', 'power', 'territory'));
     }
 
     /**

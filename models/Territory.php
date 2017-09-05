@@ -22,21 +22,6 @@ class Territory extends \yii\db\ActiveRecord
     }
 
     /**
-     * Возвращает массив для выпадающего списка
-     * @return array массив вида ['id' => 'territory_name', ...]
-     */
-    public static function getItemsFields()
-    {
-        $items = Territory::find()->all();
-        $result = [];
-        foreach ($items as $item) {
-            $result[$item['id']] = $item['territory_name'];
-        }
-
-        return $result;
-    }
-
-    /**
      * @inheritdoc
      */
     public function rules()

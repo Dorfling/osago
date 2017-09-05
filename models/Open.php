@@ -22,21 +22,6 @@ class Open extends \yii\db\ActiveRecord
     }
 
     /**
-     * Возвращает массив для выпадающего списка
-     * @return array массив вида ['id' => 'open_name', ...]
-     */
-    public static function getItemsFields()
-    {
-        $items = Open::find()->all();
-        $result = [];
-        foreach ($items as $item) {
-            $result[$item['id']] = $item['open_name'];
-        }
-
-        return $result;
-    }
-
-    /**
      * @inheritdoc
      */
     public function rules()

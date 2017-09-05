@@ -22,21 +22,6 @@ class Power extends \yii\db\ActiveRecord
     }
 
     /**
-     * Возвращает массив для выпадающего списка
-     * @return array массив вида ['id' => 'power_name', ...]
-     */
-    public static function getItemsFields()
-    {
-        $items = Power::find()->all();
-        $result = [];
-        foreach ($items as $item) {
-            $result[$item['id']] = $item['power_name'];
-        }
-
-        return $result;
-    }
-
-    /**
      * @inheritdoc
      */
     public function rules()
