@@ -2,6 +2,7 @@
 
 namespace app\controllers;
 
+use app\models\CalcForm;
 use yii\web\Controller;
 
 
@@ -25,7 +26,8 @@ class MainController extends Controller
      */
     public function actionCalculator()
     {
-        return $this->render('calculator');
+        $model = new CalcForm();
+        return $this->render('calculator', compact('model'));
     }
 
     /**
