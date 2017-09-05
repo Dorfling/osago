@@ -34,6 +34,11 @@ class MainController extends Controller
     {
         $model = new CalcForm();
 
+        // Расчет
+        if ($model->load(\Yii::$app->request->post())) {
+            $sum = $model->calculate();
+        }
+
         // Формирование пунктов для выподающих списков
         $age = ArrayHelper::map(Age::find()->all(), 'id', 'name_age');
         $open = ArrayHelper::map(Open::find()->all(), 'id', 'open_name');
@@ -41,7 +46,7 @@ class MainController extends Controller
         $power = ArrayHelper::map(Power::find()->all(), 'id', 'power_name');
         $territory = ArrayHelper::map(Territory::find()->all(), 'id', 'territory_name');
 
-        return $this->render('calculator', compact('model', 'age', 'open', 'period', 'power', 'territory'));
+        return $this->render('calculator', compact('model', 'age', 'open', 'period', 'power', 'territory', 'sum'));
     }
 
     /**

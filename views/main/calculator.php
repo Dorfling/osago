@@ -25,3 +25,7 @@ use yii\widgets\ActiveForm; ?>
     </div>
 </div>
 <?php ActiveForm::end() ?>
+
+<?php if (!empty($sum)): ?>
+    <h1><?= $sum ?> руб.</h1>
+<?php endif; ?>
