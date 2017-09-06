@@ -1,5 +1,6 @@
 <?php
 /**
+ * @var $model
  * @var $age
  * @var $open
  * @var $period
@@ -20,12 +21,15 @@ use yii\widgets\ActiveForm; ?>
 <?= $form->field($model, 'territory')->dropDownList($territory) ?>
 
 <div class="form-group">
-    <div class="col-lg-offset-1 col-lg-11">
+    <div class="col-lg-1">
         <?= Html::submitButton('Рассчитать', ['class' => 'btn btn-primary']) ?>
     </div>
 </div>
-<?php ActiveForm::end() ?>
 
-<?php if (!empty($sum)): ?>
-    <h1><?= $sum ?> руб.</h1>
-<?php endif; ?>
+<div class="col-lg-offset-1 col-lg-2">
+    <?php if (!empty($sum)): ?>
+        <h3><?= $sum ?> руб.</h3>
+    <?php endif; ?>
+</div>
+
+<?php ActiveForm::end() ?>
