@@ -3,6 +3,7 @@
 namespace app\controllers;
 
 use app\models\CalcForm;
+use app\models\Signup;
 use yii\web\Controller;
 use yii\helpers\ArrayHelper;
 use app\models\Age;
@@ -57,6 +58,27 @@ class MainController extends Controller
     public function actionDocuments()
     {
         return $this->render('documents');
+    }
+
+    /**
+     * Метод Регистрации.
+     * Сохранение пользователя в БД
+     * @return string|\yii\web\Response
+     */
+    public function actionSignup()
+    {
+        $model = new Signup();
+
+        if (isset($_POST['Signup'])) {
+            $model->attributes = \Yii::$app->request->post('Signup');
+
+            if ($model->validate()) {
+                $model->signup(); // Сохранение пользователя в БД
+                return $this->goHome();
+            }
+        }
+
+        return $this->render('signup', compact('model'));
     }
 
 }
