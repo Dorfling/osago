@@ -2,7 +2,9 @@
 
 namespace app\controllers;
 
+use Yii;
 use app\models\CalcForm;
+use app\models\Login;
 use app\models\Signup;
 use yii\web\Controller;
 use yii\helpers\ArrayHelper;
@@ -18,7 +20,6 @@ class MainController extends Controller
 
     /**
      * Главная страница
-     *
      * @return string
      */
     public function actionIndex()
@@ -28,7 +29,6 @@ class MainController extends Controller
 
     /**
      * Калькулятор ОСАГО
-     *
      * @return string
      */
     public function actionCalculator()
@@ -52,7 +52,6 @@ class MainController extends Controller
 
     /**
      * Документы о страховании
-     *
      * @return string
      */
     public function actionDocuments()
@@ -69,7 +68,7 @@ class MainController extends Controller
     {
         $model = new Signup();
 
-        if (isset($_POST['Signup'])) {
+        if (Yii::$app->request->post('Signup')) {
             $model->attributes = \Yii::$app->request->post('Signup');
 
             if ($model->validate()) {
@@ -79,6 +78,46 @@ class MainController extends Controller
         }
 
         return $this->render('signup', compact('model'));
+    }
+
+    /**
+     * Авторизация
+     * @return string|\yii\web\Response
+     */
+    public function actionLogin()
+    {
+        if (!Yii::$app->user->isGuest) {
+            return $this->goHome();
+        }
+
+        $login_model = new Login();
+
+        if( Yii::$app->request->post('Login'))
+        {
+            $login_model->attributes = Yii::$app->request->post('Login');
+
+            if($login_model->validate())
+            {
+                Yii::$app->user->login($login_model->getUser());
+                return $this->goHome();
+            }
+        }
+
+        return $this->render('login', compact('login_model'));
+    }
+
+    /**
+     * Выход
+     * @return \yii\web\Response
+     */
+    public function actionLogout()
+    {
+        if (!Yii::$app->user->isGuest) {
+            Yii::$app->user->logout();
+            return $this->redirect(['login']);
+        }
+
+        return $this->goHome();
     }
 
 }

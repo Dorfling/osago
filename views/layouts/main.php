@@ -41,6 +41,8 @@ AppAsset::register($this);
             ['label' => 'Калькулятор ОСАГО', 'url' => ['main/calculator']],
             ['label' => 'Документы', 'url' => ['main/documents']],
             ['label' => 'Регистрация', 'url' => ['main/signup']],
+            ['label' => 'Войти', 'url' => ['main/login']],
+            ['label' => 'Выйти', 'url' => ['main/logout']],
         ],
     ]);
     NavBar::end();
