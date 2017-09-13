@@ -74,6 +74,8 @@ class MainController extends Controller
             if ($model->validate()) {
                 $model->signup(); // Сохранение пользователя в БД
                 return $this->goHome();
+            } else {
+                return $this->render('signup', compact('model'));
             }
         }
 
