@@ -2,7 +2,7 @@
 
 use yii\db\Migration;
 
-class m170912_145014_rename_colomn extends Migration
+class m170912_145014_rename_column extends Migration
 {
     public function safeUp()
     {

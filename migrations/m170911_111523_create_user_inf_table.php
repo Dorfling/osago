@@ -14,13 +14,13 @@ class m170911_111523_create_user_inf_table extends Migration
     {
         $this->createTable('user_inf', [
             'id' => $this->primaryKey(),
-            'name' => $this->string(30),
-            'surname' => $this->string(30),
-            'patronymic' => $this->string(30),
-            'birth_date' => $this->date(),
-            'sex' => $this->boolean(),
+            'name' => $this->string(30)->notNull(),
+            'surname' => $this->string(30)->notNull(),
+            'patronymic' => $this->string(30)->notNull(),
+            'birth_date' => $this->date()->notNull(),
+            'sex' => $this->boolean()->notNull(),
             'phone_num' => $this->string(20),
-            'id_users' => $this->integer(11),
+            'id_users' => $this->integer(11)->notNull(),
         ]);
     }
 
